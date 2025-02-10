@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Gallery Cammy</title>
+    <link rel="icon" href="cen.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .navbar .logo {
+            font-size: 2em;
+            font-weight: 600;
+            color: #ff04bc;
+            text-shadow: 0 3px 5px rgba(255, 255, 255, 0.6);
+            letter-spacing: 1px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1em;
+            transition: all 0.3s ease-in-out;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li.active a {
+            color: #ff04bc;
+            background: rgba(255, 4, 188, 0.2);
+        }
+
+        .image-gallery {
+            text-align: center;
+            margin: 50px 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .image-gallery h2 {
+            font-size: 3.2em;
+            margin-bottom: 30px;
+            color: #ff04bc;
+            text-shadow: 0 5px 15px rgba(255, 4, 188, 0.4);
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .image-box {
+            background: rgba(51, 51, 51, 0.8);
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .image-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-box p {
+            margin: 15px 10px;
+            font-size: 1.2em;
+            color: #ddd;
+            text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s ease;
+        }
+
+        .image-box:hover p {
+            color: #ff04bc;
+        }
+
+        .image-box a {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-gallery h2 {
+                font-size: 2.8em;
+            }
+
+            .image-box img {
+                height: 200px;
+            }
+
+            .navbar ul {
+                display: none;
+            }
+
+            .navbar.active ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                border-radius: 5px;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .navbar ul li a {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Cammy</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="hobby.html">Hobby</a></li>
+            <li><a href="Achievement.html">Achievement</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <section class="image-gallery">
+        <h2>Camelia's Hobbies</h2>
+        <div class="image-container">
+            <div class="image-box">
+                <a href="https://www.livewellbakeoften.com/red-velvet-cake-mix-cookies/">
+                    <img src="baking.jpg" alt="Baking">
+                </a>
+                <p>Baking Delicious Treats</p>
+            </div>
+            <div class="image-box">
+                <a href="https://youtu.be/2s9iuWuo2r8?feature=shared">
+                    <img src="lepak.jpg" alt="Lepak">
+                </a>
+                <p>Trips with Classmates</p>
+            </div>
+            <div class="image-box">
+                <a href="https://sallysbakingaddiction.com/chewy-chocolate-chip-cookies/">
+                    <img src="beking.jpg" alt="Baking">
+                </a>
+                <p>More Baking Adventures</p>
+            </div>
+            <div class="image-box">
+                <a href="https://hdtodayz.to/home">
+                    <img src="download.jpeg" alt="Netflix">
+                </a>
+                <p>Relaxing with Netflix</p>
+            </div>
+            <div class="image-box">
+                <a href="https://www.youtube.com/watch?v=O-9ceq2gFsw">
+                    <img src="download (1).jpeg" alt="Sunset">
+                </a>
+                <p>Healing by Watching Sunsets</p>
+            </div>
+            <div class="image-box">
+                <a href="https://www.instagram.com/caameliaa.beads/">
+                    <img src="bead.jpg" alt="Crafting">
+                </a>
+                <p>Crafting Beautiful Accessories</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Change navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

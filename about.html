@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <link rel="icon" href="cen.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, rgb(26, 42, 108), rgb(255, 0, 208), rgb(253, 45, 45));
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: rgb(255, 0, 208);
+        }
+
+        .about-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .about-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-section h1 {
+            color: #fff;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .profile-image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-image img {
+            width: 60%;
+            height: auto;
+            max-width: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-text {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+            line-height: 1.7;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cat-section {
+            margin-top: 40px;
+        }
+
+        .cat-section img {
+            width: 60%;
+            height: auto;
+            max-width: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .cat-section img:hover {
+            transform: scale(1.02);
+        }
+
+        .video-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-section h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-section video {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .about-section, .video-section {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            .profile-image img, .cat-section img {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Cammy</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="about.html">About</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="Achievement.html">Achievement</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <h1>About Me</h1>
+        <div class="profile-image">
+            <img src="cammy.jpg" alt="My Image">
+        </div>
+        <p class="about-text">My name is Camelia Shanta anak Giri, and I am a 20-year-old student currently pursuing a Diploma in Business Studies with a specialization in Transport. I am enrolled at Universiti Teknologi MARA (UiTM) Kota Kinabalu, one of Malaysia’s leading institutions for higher education.
+
+            My academic journey has been shaped by a keen interest in the dynamic and ever-evolving field of transport and logistics, which plays a pivotal role in connecting industries and driving global commerce. Through my diploma program, I am developing a comprehensive understanding of business operations, management principles, and transport systems, all of which are crucial in today’s interconnected world.
+            
+            As a student, I am highly motivated and dedicated to excelling in my studies. I actively seek opportunities to expand my knowledge and skills, both inside and outside the classroom, to prepare myself for the challenges of the professional world. My goal is to contribute meaningfully to the transport and logistics sector by leveraging innovative solutions and sustainable practices.</p> 
+        <div class="cat-section">
+            <img src="cen.png" alt="Favorite Cat"> 
+            <p class="about-text">So this is her favorite cat before she loved me</p>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h2>My Favourite View</h2>
+        <video width="640" height="360" controls autoplay muted>
+            <source src="heal.mp4" type="video/mp4">
+        </video>
+    </section>
+
+</body>
+
+</html>

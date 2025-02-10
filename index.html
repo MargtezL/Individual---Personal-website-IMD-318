@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Personal Portfolio Website using HTML & CSS | Codehal</title>
+    <link rel="icon" href="cen.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Cammy</a>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="Achievement.html">Achievement</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <div class="bars-animation">
+        <div class="bar"style="--i:6;"></div>
+        <div class="bar"style="--i:5;"></div>
+        <div class="bar"style="--i:4;"></div>
+        <div class="bar"style="--i:3;"></div>
+        <div class="bar"style="--i:2;"></div>
+        <div class="bar"style="--i:1;"></div>
+    </div>
+
+    <section class="home">
+        <div class="home-info">
+            <h1>Camelia Shanta Anak Giri</h1>
+            <h2>I love
+                <span style="--i:4;" data-text="Baking">Baking</span>
+                <span style="--i:3;" data-text="Cooking">Cooking</span>
+                <span style="--i:2;" data-text="Cencen">Cencen</span>
+                <span style="--i:1;" data-text="Ceci">Ceci</span>
+            </h2>
+            <p>Web design is the art of creating visually appealing and functional websites that provide a 
+                great user experience. it combines layout, colors, typography,and interactive elements to meets standards
+                for accessibility and usability.
+            </p>
+            <div class="date-info" id="current-datetime">
+                Updated on: 
+            </div>
+            <div class="btn-sci">
+                <a href="https://www.instagram.com/caameliaa.beads/" class="btn">Business Acc</a>
+                <div class="sci">
+                    <a href="https://www.instagram.com/caameliaa.s/"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="https://www.tiktok.com/@3lmo_"><i class='bx bxl-tiktok' ></i></a>
+                    <a href="https://www.youtube.com/watch?v=BBJa32lCaa Y"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+            </div>
+        </div> 
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                   <img src="cam.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Function to update date and time
+        function updateDateTime() {
+            const now = new Date();
+            
+            // Format date
+            const dateOptions = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            const formattedDate = now.toLocaleDateString('en-US', dateOptions);
+            
+            // Format time
+            const timeOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+            
+            // Update the element
+            const datetimeElement = document.getElementById('current-datetime');
+            datetimeElement.textContent = `Updated on: ${formattedDate} at ${formattedTime}`;
+        }
+
+        // Update immediately and then every second
+        document.addEventListener('DOMContentLoaded', () => {
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        });
+        
+        
+    </script>
+    <footer>
+        <p>Copyright © 2025 Luz Margtez. All Rights Reserved.</p>
+    </footer>
+    
+
+</body>
+
+</html> 
+</body>
+</html>
